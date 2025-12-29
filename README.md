@@ -1,4 +1,4 @@
-# HackerAI Keylogger
+# Keylogger
 
 ## Overview
 This project is a Python-based keylogger with both console and GUI versions. It uses the `pynput` library to capture keyboard events and logs them in both JSON and plain text formats. The GUI version is built with `tkinter` and provides controls to start, stop, and clear logs, as well as a live display of captured keystrokes.
