@@ -171,3 +171,4 @@ info_label.pack(pady=5)
 # Start GUI
 print("[+] Keylogger GUI launched!")
 gui_root.mainloop()
+
