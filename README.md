@@ -1,53 +1,173 @@
-# Keylogger
+# Python Keyboard Event Logger
 
-## Overview
-This project is a Python-based keylogger with both console and GUI versions. It uses the `pynput` library to capture keyboard events and logs them in both JSON and plain text formats. The GUI version is built with `tkinter` and provides controls to start, stop, and clear logs, as well as a live display of captured keystrokes.
+A Python application that demonstrates keyboard event monitoring, JSON data logging, multithreading, and GUI development using Tkinter.
+
+> Educational project for learning event-driven programming, file handling, and desktop application development in Python.
+
+---
 
 ## Features
-- **Keyboard Event Logging:** Captures key presses, holds, and releases.
-- **Multiple Output Formats:** Logs are saved in both `logs.json` (structured JSON) and `logs.txt` (plain text).
-- **GUI Control Panel:** Start, stop, and clear logs with a user-friendly interface (see `update.V.02.py`).
-- **Live Log Display:** View keystrokes in real-time in the GUI.
-- **Thread-Safe Logging:** Ensures GUI updates are safe and responsive.
 
-## Files
-- `keylogger.py`: Basic keylogger that logs keystrokes to `logs.json`.
-- `update.V.01.py`: Enhanced version that logs to both JSON and TXT files, with improved formatting.
-- `update.V.02.py`: Advanced version with a Tkinter GUI for interactive control and live log viewing.
-- `logs.json`: Output file for structured key logs (created at runtime).
-- `logs.txt`: Output file for plain text key logs (created at runtime).
+### Keyboard Event Monitoring
 
-## Requirements
-- Python 3.x
-- `pynput` library
-- `tkinter` (usually included with Python)
+* Captures keyboard press and release events.
+* Records user input activity in real time.
+* Demonstrates event listeners using the `pynput` library.
 
-Install dependencies with:
+### Multiple Log Formats
+
+* Structured JSON output (`logs.json`)
+* Plain text output (`logs.txt`)
+
+### Graphical User Interface
+
+* Built with Tkinter.
+* Start and stop logging with a simple control panel.
+* Clear log files directly from the application.
+* View captured events in real time.
+
+### Thread-Safe Architecture
+
+* Uses threading to keep the GUI responsive.
+* Safe communication between background logging processes and the user interface.
+
+---
+
+## Technologies Used
+
+* Python 3
+* Tkinter
+* pynput
+* JSON
+* Threading
+
+---
+
+## Project Structure
+
+```text
+Keylogger/
+│
+├── keylogger.py          # Basic keyboard event logger
+├── update.V.01.py        # Enhanced logger with JSON and TXT output
+├── update.V.02.py        # GUI version with live monitoring
+│
+├── logs.json             # Generated at runtime
+├── logs.txt              # Generated at runtime
+│
+└── README.md
+```
+
+---
+
+## Installation
+
+### Clone the Repository
+
+```bash
+git clone https://github.com/prakashgangurde-ux/Keylogger.git
+cd Keylogger
+```
+
+### Install Dependencies
+
 ```bash
 pip install pynput
 ```
 
+---
+
 ## Usage
+
 ### Console Version
-Run the basic or enhanced keylogger from the terminal:
+
+Run the basic logger:
+
 ```bash
 python keylogger.py
-# or
+```
+
+Or the enhanced version:
+
+```bash
 python update.V.01.py
 ```
 
 ### GUI Version
-Run the GUI keylogger:
+
+Launch the graphical interface:
+
 ```bash
 python update.V.02.py
 ```
 
-- **START:** Begins logging keystrokes.
-- **STOP:** Stops logging.
-- **CLEAR LOGS:** Clears the log files and GUI display.
+### Available Controls
 
-## Security & Ethics
-This tool is for educational and authorized testing purposes only. Do **not** use it to monitor devices without explicit permission. Unauthorized use may be illegal and unethical.
+| Button     | Function                            |
+| ---------- | ----------------------------------- |
+| START      | Begin monitoring keyboard events    |
+| STOP       | Stop monitoring                     |
+| CLEAR LOGS | Remove saved logs and clear display |
 
-## Disclaimer
-The author is not responsible for any misuse of this software. Use responsibly and only in compliance with local laws and regulations.
+---
+
+## Learning Objectives
+
+This project demonstrates:
+
+* Event-driven programming
+* Keyboard input handling
+* File I/O operations
+* JSON serialization
+* GUI development with Tkinter
+* Multithreading concepts
+* Thread-safe UI updates
+
+---
+
+## Screenshots
+
+Add screenshots of the GUI here.
+
+Example:
+
+```text
+screenshots/
+├── main-window.png
+├── logging-active.png
+└── logs-view.png
+```
+
+---
+
+## Future Improvements
+
+* Export logs as CSV
+* Search and filter functionality
+* Dark mode interface
+* Configurable log storage location
+* Improved event statistics dashboard
+* Cross-platform packaging
+
+---
+
+## Ethical Use Notice
+
+This project is intended solely for educational purposes and authorized testing environments.
+
+Users should only run this software on systems they own or have explicit permission to test. Unauthorized monitoring of devices or user activity may violate privacy laws and organizational policies.
+
+---
+
+## License
+
+This project is open source and available under the MIT License.
+
+---
+
+## Author
+
+Prakash Gangurde
+
+GitHub:
+https://github.com/prakashgangurde-ux
